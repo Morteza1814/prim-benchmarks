@@ -46,8 +46,7 @@ int main() {
     if(numNodes > 0) {
 
         uint64_t* cache_w = mem_alloc(sizeof(uint64_t));
-      
-        uint32_t dpuTriangleCount = load4B(dpuTriangleCount_m, 0, cache_w);        
+           
 
         // Identify tasklet's nodes
         uint32_t numNodesPerTasklet = (numNodes + NR_TASKLETS - 1)/NR_TASKLETS;
@@ -89,14 +88,20 @@ int main() {
         }
         mutex_id_t mutexID = MUTEX_GET(nextFrontierMutex);
         mutex_lock(mutexID);
+        uint32_t dpuTriangleCount = load4B(dpuTriangleCount_m, 0, cache_w);   
         dpuTriangleCount += localTriangleCount;
+        store4B(dpuTriangleCount, dpuTriangleCount_m, 0, cache_w);
         mutex_unlock(mutexID);
 
         barrier_wait(&beforeStoringTC);
-        //devide by 6 because of repeatations
-        uint32_t finalTriangleCount = dpuTriangleCount / 6;
-        // Store triangle count
-        store4B(finalTriangleCount, dpuTriangleCount_m, 0, cache_w);
+
+        if(me() == 0) {
+            uint32_t dpuTriangleCount_last = load4B(dpuTriangleCount_m, 0, cache_w);   
+            //devide by 6 because of repeatations
+            uint32_t finalTriangleCount = dpuTriangleCount_last / 6;
+            // Store triangle count
+            store4B(finalTriangleCount, dpuTriangleCount_m, 0, cache_w);
+        }
     }
     
     return 0;
