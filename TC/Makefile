@@ -3,7 +3,7 @@ HOST_DIR := host
 CPU_BASE_DIR := baselines/cpu
 GPU_BASE_DIR := baselines/gpu
 BUILDDIR ?= bin
-NR_TASKLETS ?= 1
+NR_TASKLETS ?= 16
 NR_DPUS ?= 1
 
 define conf_filename
