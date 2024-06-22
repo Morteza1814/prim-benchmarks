@@ -1,5 +1,5 @@
 /*
-* BFS with multiple tasklets
+* TC with multiple tasklets
 *
 */
 #include <stdio.h>
@@ -15,7 +15,6 @@
 #include "common.h"
 
 BARRIER_INIT(my_barrier, NR_TASKLETS);
-BARRIER_INIT(bfsBarrier, NR_TASKLETS);
 BARRIER_INIT(beforeStoringTC, NR_TASKLETS);
 
 MUTEX_INIT(nextFrontierMutex);
