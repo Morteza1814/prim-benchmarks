@@ -112,5 +112,84 @@ static void freeCSRGraph(struct CSRGraph csrGraph) {
     free(csrGraph.neighborIdxs);
 }
 
+static struct CSRGraph read_graph_data(const char *filename) {
+    struct CSRGraph csrGraph;
+
+    FILE *file = fopen(filename, "r");
+    if (file == NULL) {
+        fprintf(stderr, "Error opening file %s\n", filename);
+        exit(EXIT_FAILURE);
+    }
+
+    char *line = NULL;
+    size_t len = 0;
+    ssize_t read;
+    int count, index;
+    char *token;
+
+    // Read nodePtrs_test
+    if ((read = getline(&line, &len, file)) != -1) {
+        count = 0;
+        token = strtok(line, " ");
+        while (token != NULL) {
+            count++;
+            token = strtok(NULL, " ");
+        }
+
+        // Allocate memory for nodePtrs
+        csrGraph.nodePtrs = (uint32_t*) calloc(ROUND_UP_TO_MULTIPLE_OF_2(count), sizeof(uint32_t));
+        if (csrGraph.nodePtrs == NULL) {
+            fprintf(stderr, "Memory allocation failed for nodePtrs\n");
+            exit(EXIT_FAILURE);
+        }
+
+        // Fill nodePtrs array
+        fseek(file, 0, SEEK_SET);
+        getline(&line, &len, file);
+        token = strtok(line, " ");
+        index = 0;
+        while (token != NULL) {
+            csrGraph.nodePtrs[index++] = atoi(token);
+            token = strtok(NULL, " ");
+        }
+        csrGraph.numNodes = count - 1;
+    }
+
+    // Read neighborIdxs_test
+     if ((read = getline(&line, &len, file)) != -1) {
+        count = 0;
+        token = strtok(line, " ");
+        while (token != NULL) {
+            count++;
+            token = strtok(NULL, " ");
+        }
+
+        // Allocate memory for neighborIdxs
+        csrGraph.neighborIdxs = (uint32_t*)malloc(ROUND_UP_TO_MULTIPLE_OF_8(count*sizeof(uint32_t)));
+        if (csrGraph.neighborIdxs == NULL) {
+            fprintf(stderr, "Memory allocation failed for neighborIdxs\n");
+            exit(EXIT_FAILURE);
+        }
+
+        // Fill neighborIdxs array
+        fseek(file, 0, SEEK_SET);
+        getline(&line, &len, file);  // Skip the nodePtrs line
+        getline(&line, &len, file);
+        token = strtok(line, " ");
+        index = 0;
+        while (token != NULL) {
+            csrGraph.neighborIdxs[index++] = atoi(token);
+            token = strtok(NULL, " ");
+        }
+        csrGraph.numEdges = count;
+    }
+
+    fclose(file);
+    if (line) {
+        free(line);
+    }
+    return csrGraph;
+}
+
 #endif
 
