@@ -94,6 +94,7 @@ int main(int argc, char** argv) {
     PRINT_INFO(p.verbosity >= 2, "Assigning %u nodes per DPU", numNodesPerDPU);
     struct DPUParams dpuParams[numDPUs];
     uint32_t dpuParams_m[numDPUs];
+    uint32_t cpuTriangleCounts[numDPUs];
     unsigned int dpuIdx = 0;
     DPU_FOREACH (dpu_set, dpu) {
         PRINT_INFO(p.verbosity >= 2, "=======================================");
@@ -103,7 +104,8 @@ int main(int argc, char** argv) {
         dpuParams_m[dpuIdx] = mram_heap_alloc(&allocator, sizeof(struct DPUParams));
 
         // Find DPU's nodes
-        uint32_t dpuStartNodeIdx = dpuIdx*numNodesPerDPU;
+        // uint32_t dpuStartNodeIdx = dpuIdx*numNodesPerDPU;
+        uint32_t dpuStartNodeIdx = 0;
         uint32_t dpuNumNodes;
         if(dpuStartNodeIdx > numNodes) {
             dpuNumNodes = 0;
@@ -112,6 +114,7 @@ int main(int argc, char** argv) {
         } else {
             dpuNumNodes = numNodesPerDPU;
         }
+        
         PRINT_INFO(p.verbosity >= 2, "dpuStartNodeIdx: %u ", dpuStartNodeIdx);//morteza log
         dpuParams[dpuIdx].dpuNumNodes = dpuNumNodes;
         PRINT_INFO(p.verbosity >= 2, "DPU %u:", dpuIdx);
@@ -152,6 +155,10 @@ int main(int argc, char** argv) {
             stopTimer(&timer);
             loadTime += getElapsedTime(timer);
 
+            //cpu check
+            cpuTriangleCounts[dpuIdx] = countTriangles(dpuNumNodes, dpuNodePtrs_h, dpuNeighborIdxs_h);
+            PRINT_INFO(p.verbosity >= 2, "numTrianglesDPU on host: %u ", cpuTriangleCounts[dpuIdx]);//morteza log
+
         }
 
         // Send parameters to DPU
@@ -164,7 +171,7 @@ int main(int argc, char** argv) {
         ++dpuIdx;
 
     }
-    PRINT_INFO(p.verbosity >= 2, "=======================================");
+    PRINT_INFO(p.verbosity >= 2, "------------------------------------------------");
 
     PRINT_INFO(p.verbosity >= 1, "CPU-DPU Time: %f ms", loadTime*1e3);
 
@@ -187,17 +194,32 @@ int main(int argc, char** argv) {
     PRINT_INFO(p.verbosity >= 2, "Copying back the result");
     startTimer(&timer);
     dpuIdx = 0;
+    uint32_t dpuTriangleCounts[numDPUs];
     DPU_FOREACH (dpu_set, dpu) {
         uint32_t dpuNumNodes = dpuParams[dpuIdx].dpuNumNodes;
         PRINT_INFO(p.verbosity >= 2, "DPU %u has %u nodes", dpuIdx, dpuNumNodes);
         if(dpuNumNodes > 0) {
             // uint32_t dpuStartNodeIdx = dpuIdx*numNodesPerDPU;
             uint32_t dpuTriangleCount = 0;
-            copyFromDPU(dpu, dpuParams[dpuIdx].dpuTriangleCount_m, (uint8_t*) &(dpuTriangleCount), sizeof(uint32_t));
-            PRINT_INFO(p.verbosity >= 1, "DPU %u counted %u triangles", dpuIdx, dpuTriangleCount);
+            copyFromDPU(dpu, dpuParams[dpuIdx].dpuTriangleCount_m, (uint8_t*) &(dpuTriangleCounts[dpuIdx]), sizeof(uint32_t));
+            PRINT_INFO(p.verbosity >= 2, "DPU %u counted %u triangles", dpuIdx, dpuTriangleCounts[dpuIdx]);
         }
         ++dpuIdx;
     }
+
+    //verify the dpu results
+    PRINT_INFO(p.verbosity >= 2, "<<<<<<<<<<<<<<<Verifying the results>>>>>>>>>>>>>>>");
+    uint32_t dpusNotMatching = 0;
+    for(uint32_t i = 0; i < numDPUs; ++i) {
+        if(dpuTriangleCounts[i] == cpuTriangleCounts[i]) {
+            PRINT_INFO(p.verbosity >= 2, "DPU %u and CPU agree on the number of triangles", i);
+        } else {
+            PRINT_INFO(p.verbosity >= 2, "DPU %u and CPU disagree on the number of triangles", i);
+            dpusNotMatching++;
+        }
+    }
+    if(dpusNotMatching == 0)
+        PRINT_INFO(p.verbosity >= 1, "All DPUs and CPU agree on the number of triangles");
     stopTimer(&timer);
     retrieveTime += getElapsedTime(timer);
     PRINT_INFO(p.verbosity >= 1, "DPU-CPU Time: %f ms", retrieveTime*1e3);
