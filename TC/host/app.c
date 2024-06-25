@@ -94,7 +94,7 @@ int main(int argc, char** argv) {
     PRINT_INFO(p.verbosity >= 2, "Assigning %u nodes per DPU", numNodesPerDPU);
     struct DPUParams dpuParams[numDPUs];
     uint32_t dpuParams_m[numDPUs];
-    uint32_t cpuTriangleCounts[numDPUs];
+    uint32_t* cpuTriangleCounts = malloc(sizeof(uint32_t)*numDPUs);
     unsigned int dpuIdx = 0;
     DPU_FOREACH (dpu_set, dpu) {
         PRINT_INFO(p.verbosity >= 2, "=======================================");
@@ -171,6 +171,7 @@ int main(int argc, char** argv) {
         ++dpuIdx;
 
     }
+
     PRINT_INFO(p.verbosity >= 2, "------------------------------------------------");
 
     PRINT_INFO(p.verbosity >= 1, "CPU-DPU Time: %f ms", loadTime*1e3);
@@ -194,6 +195,7 @@ int main(int argc, char** argv) {
     PRINT_INFO(p.verbosity >= 2, "Copying back the result");
     startTimer(&timer);
     dpuIdx = 0;
+
     uint32_t dpuTriangleCounts[numDPUs];
     DPU_FOREACH (dpu_set, dpu) {
         uint32_t dpuNumNodes = dpuParams[dpuIdx].dpuNumNodes;
@@ -214,12 +216,16 @@ int main(int argc, char** argv) {
         if(dpuTriangleCounts[i] == cpuTriangleCounts[i]) {
             PRINT_INFO(p.verbosity >= 2, "DPU %u and CPU agree on the number of triangles", i);
         } else {
-            PRINT_INFO(p.verbosity >= 2, "DPU %u and CPU disagree on the number of triangles", i);
+            PRINT_INFO(p.verbosity >= 2, "DPU %u and CPU disagree on the number of triangles, DPU = %u, CPU=%u", i, dpuTriangleCounts[i], cpuTriangleCounts[i]);
             dpusNotMatching++;
         }
     }
-    if(dpusNotMatching == 0)
+    if(dpusNotMatching == 0){
         PRINT_INFO(p.verbosity >= 1, "All DPUs and CPU agree on the number of triangles");
+    } else{
+        PRINT_INFO(p.verbosity >= 1, "There are %u DPUs that disagree on the number of triangles", dpusNotMatching);
+    }
+
     stopTimer(&timer);
     retrieveTime += getElapsedTime(timer);
     PRINT_INFO(p.verbosity >= 1, "DPU-CPU Time: %f ms", retrieveTime*1e3);
@@ -237,8 +243,8 @@ int main(int argc, char** argv) {
     }
 
     // Deallocate data structures
-    // freeCOOGraph(cooGraph);
     freeCSRGraph(csrGraph);
+    free(cpuTriangleCounts);
 
     return 0;
 
