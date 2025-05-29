@@ -1,0 +1,799 @@
+nohup: ignoring input
+rm -f -r bin
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_1_NR_TASKLETS_1_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=1 -DNR_DPUS=1 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=1 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|01:37:44: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:1048576 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|01:38:16: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:524288 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|01:38:32: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:2147745792 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|01:38:40: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:1073872896 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_1_NR_TASKLETS_2_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=2 -DNR_DPUS=1 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=2 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|01:39:44: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:1048576 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|01:40:16: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:524288 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|01:40:32: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:2147745792 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|01:40:40: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:1073872896 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_1_NR_TASKLETS_4_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=4 -DNR_DPUS=1 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=4 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|01:41:45: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:1048576 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|01:42:17: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:524288 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|01:42:33: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:2147745792 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|01:42:41: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:1073872896 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_1_NR_TASKLETS_8_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=8 -DNR_DPUS=1 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=8 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|01:43:46: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:1048576 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|01:44:18: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:524288 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|01:44:34: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:2147745792 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|01:44:42: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:1073872896 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_1_NR_TASKLETS_16_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=16 -DNR_DPUS=1 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=16 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|01:45:46: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:1048576 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|01:46:18: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:524288 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|01:46:35: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:2147745792 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|01:46:43: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:1073872896 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_2_NR_TASKLETS_1_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=1 -DNR_DPUS=2 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=1 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|01:47:47: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:524288 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|01:48:19: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:2147745792 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|01:48:35: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:1073872896 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|01:48:44: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:536936448 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_2_NR_TASKLETS_2_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=2 -DNR_DPUS=2 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=2 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|01:49:48: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:524288 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|01:50:20: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:2147745792 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|01:50:36: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:1073872896 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|01:50:44: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:536936448 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_2_NR_TASKLETS_4_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=4 -DNR_DPUS=2 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=4 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|01:51:49: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:524288 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|01:52:21: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:2147745792 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|01:52:37: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:1073872896 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|01:52:45: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:536936448 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_2_NR_TASKLETS_8_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=8 -DNR_DPUS=2 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=8 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|01:53:49: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:524288 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|01:54:21: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:2147745792 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|01:54:37: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:1073872896 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|01:54:46: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:536936448 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_2_NR_TASKLETS_16_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=16 -DNR_DPUS=2 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=16 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|01:55:50: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:524288 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|01:56:22: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:2147745792 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|01:56:38: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:1073872896 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|01:56:46: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:536936448 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_4_NR_TASKLETS_1_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=1 -DNR_DPUS=4 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=1 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|01:57:51: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:2147745792 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|01:58:23: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:1073872896 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|01:58:39: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:536936448 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|01:58:47: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:268468224 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_4_NR_TASKLETS_2_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=2 -DNR_DPUS=4 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=2 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|01:59:51: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:2147745792 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:00:23: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:1073872896 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:00:39: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:536936448 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:00:47: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:268468224 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_4_NR_TASKLETS_4_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=4 -DNR_DPUS=4 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=4 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|02:01:52: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:2147745792 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:02:24: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:1073872896 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:02:40: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:536936448 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:02:48: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:268468224 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_4_NR_TASKLETS_8_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=8 -DNR_DPUS=4 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=8 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|02:03:52: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:2147745792 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:04:24: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:1073872896 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:04:41: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:536936448 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:04:49: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:268468224 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_4_NR_TASKLETS_16_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=16 -DNR_DPUS=4 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=16 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|02:05:53: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:2147745792 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:06:25: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:1073872896 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:06:41: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:536936448 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:06:49: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:268468224 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_8_NR_TASKLETS_1_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=1 -DNR_DPUS=8 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=1 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|02:07:54: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:1073872896 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:08:26: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:536936448 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:08:42: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:268468224 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:08:50: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:134234112 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_8_NR_TASKLETS_2_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=2 -DNR_DPUS=8 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=2 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|02:09:54: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:1073872896 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:10:26: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:536936448 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:10:42: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:268468224 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:10:51: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:134234112 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_8_NR_TASKLETS_4_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=4 -DNR_DPUS=8 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=4 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|02:11:55: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:1073872896 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:12:27: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:536936448 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:12:43: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:268468224 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:12:51: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:134234112 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_8_NR_TASKLETS_8_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=8 -DNR_DPUS=8 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=8 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|02:13:55: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:1073872896 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:14:28: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:536936448 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:14:44: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:268468224 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:14:52: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:134234112 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_8_NR_TASKLETS_16_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=16 -DNR_DPUS=8 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=16 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|02:15:56: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:1073872896 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:16:28: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:536936448 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:16:44: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:268468224 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:16:52: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:134234112 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_16_NR_TASKLETS_1_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=1 -DNR_DPUS=16 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=1 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|02:17:57: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:536936448 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:18:29: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:268468224 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:18:45: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:134234112 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:18:53: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:67117056 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_16_NR_TASKLETS_2_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=2 -DNR_DPUS=16 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=2 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|02:19:57: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:536936448 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:20:30: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:268468224 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:20:46: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:134234112 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:20:54: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:67117056 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_16_NR_TASKLETS_4_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=4 -DNR_DPUS=16 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=4 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|02:21:58: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:536936448 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:22:30: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:268468224 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:22:46: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:134234112 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:22:55: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:67117056 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_16_NR_TASKLETS_8_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=8 -DNR_DPUS=16 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=8 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|02:23:59: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:536936448 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:24:31: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:268468224 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:24:47: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:134234112 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:24:55: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:67117056 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_16_NR_TASKLETS_16_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=16 -DNR_DPUS=16 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=16 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|02:25:59: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:536936448 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:26:31: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:268468224 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:26:48: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:134234112 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:26:56: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:67117056 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_32_NR_TASKLETS_1_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=1 -DNR_DPUS=32 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=1 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|02:28:00: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:268468224 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:28:32: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:134234112 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:28:48: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:67117056 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_32_NR_TASKLETS_2_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=2 -DNR_DPUS=32 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=2 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|02:30:22: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:268468224 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:30:55: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:134234112 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:31:11: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:67117056 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_32_NR_TASKLETS_4_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=4 -DNR_DPUS=32 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=4 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|02:32:34: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:268468224 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:33:06: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:134234112 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:33:22: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:67117056 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_32_NR_TASKLETS_8_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=8 -DNR_DPUS=32 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=8 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|02:34:41: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:268468224 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:35:13: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:134234112 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:35:29: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:67117056 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_32_NR_TASKLETS_16_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=16 -DNR_DPUS=32 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=16 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|02:36:45: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:268468224 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:37:17: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:134234112 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:37:34: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:67117056 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_64_NR_TASKLETS_1_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=1 -DNR_DPUS=64 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=1 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|02:38:49: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:134234112 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:39:21: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:67117056 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_64_NR_TASKLETS_2_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=2 -DNR_DPUS=64 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=2 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|02:41:23: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:134234112 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:41:55: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:67117056 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_64_NR_TASKLETS_4_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=4 -DNR_DPUS=64 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=4 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|02:43:42: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:134234112 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:44:14: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:67117056 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_64_NR_TASKLETS_8_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=8 -DNR_DPUS=64 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=8 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|02:45:53: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:134234112 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:46:25: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:67117056 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_64_NR_TASKLETS_16_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=16 -DNR_DPUS=64 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=16 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|02:48:00: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:134234112 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+api:W:2025-05-29|02:48:32: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:67117056 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_128_NR_TASKLETS_1_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=1 -DNR_DPUS=128 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=1 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|02:50:06: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:67117056 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_128_NR_TASKLETS_2_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=2 -DNR_DPUS=128 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=2 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|02:52:49: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:67117056 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_128_NR_TASKLETS_4_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=4 -DNR_DPUS=128 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=4 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|02:55:14: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:67117056 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_128_NR_TASKLETS_8_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=8 -DNR_DPUS=128 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=8 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|02:57:29: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:67117056 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_128_NR_TASKLETS_16_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=16 -DNR_DPUS=128 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=16 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+api:W:2025-05-29|02:59:41: dpu_push_xfer_symbol: invalid symbol access (offset:0 + length:67117056 > size:66060288)
+host/app.c:168(main): DPU Error (invalid memory symbol access)
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_256_NR_TASKLETS_1_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=1 -DNR_DPUS=256 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=1 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_256_NR_TASKLETS_2_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=2 -DNR_DPUS=256 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=2 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_256_NR_TASKLETS_4_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=4 -DNR_DPUS=256 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=4 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_256_NR_TASKLETS_8_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=8 -DNR_DPUS=256 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=8 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_256_NR_TASKLETS_16_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=16 -DNR_DPUS=256 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=16 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_512_NR_TASKLETS_1_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=1 -DNR_DPUS=512 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=1 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_512_NR_TASKLETS_2_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=2 -DNR_DPUS=512 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=2 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_512_NR_TASKLETS_4_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=4 -DNR_DPUS=512 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=4 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_512_NR_TASKLETS_8_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=8 -DNR_DPUS=512 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=8 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_512_NR_TASKLETS_16_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=16 -DNR_DPUS=512 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=16 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_1024_NR_TASKLETS_1_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=1 -DNR_DPUS=1024 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=1 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_1024_NR_TASKLETS_2_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=2 -DNR_DPUS=1024 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=2 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_1024_NR_TASKLETS_4_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=4 -DNR_DPUS=1024 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=4 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_1024_NR_TASKLETS_8_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=8 -DNR_DPUS=1024 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=8 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
