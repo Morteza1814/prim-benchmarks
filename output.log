@@ -837,3 +837,512 @@ dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=4 -DBL=10 -o
 [0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
          Please consider upgrading to a more recent OS.
          (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_2048_NR_TASKLETS_8_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=8 -DNR_DPUS=2048 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=8 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_2048_NR_TASKLETS_16_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=16 -DNR_DPUS=2048 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=16 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+Application to run is: GEMV
+------------------------ Running: GEMV----------------------
+--------------------------------------------------------------------
+Creation of the direction /log failed
+Creation of the direction /log/host failed
+Creation of the direction /profile failed
+Running = NR_DPUS=1 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl1_bl10_dpus1_M4096_V524352
+Running = NR_DPUS=1 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl1_bl10_dpus1_M4096_V262176
+Running = NR_DPUS=1 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl1_bl10_dpus1_M4096_V131088
+Running = NR_DPUS=1 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl1_bl10_dpus1_M4096_V65544
+Running = NR_DPUS=1 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl2_bl10_dpus1_M4096_V524352
+Running = NR_DPUS=1 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl2_bl10_dpus1_M4096_V262176
+Running = NR_DPUS=1 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl2_bl10_dpus1_M4096_V131088
+Running = NR_DPUS=1 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl2_bl10_dpus1_M4096_V65544
+Running = NR_DPUS=1 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl4_bl10_dpus1_M4096_V524352
+Running = NR_DPUS=1 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl4_bl10_dpus1_M4096_V262176
+Running = NR_DPUS=1 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl4_bl10_dpus1_M4096_V131088
+Running = NR_DPUS=1 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl4_bl10_dpus1_M4096_V65544
+Running = NR_DPUS=1 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl8_bl10_dpus1_M4096_V524352
+Running = NR_DPUS=1 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl8_bl10_dpus1_M4096_V262176
+Running = NR_DPUS=1 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl8_bl10_dpus1_M4096_V131088
+Running = NR_DPUS=1 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl8_bl10_dpus1_M4096_V65544
+Running = NR_DPUS=1 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl16_bl10_dpus1_M4096_V524352
+Running = NR_DPUS=1 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl16_bl10_dpus1_M4096_V262176
+Running = NR_DPUS=1 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl16_bl10_dpus1_M4096_V131088
+Running = NR_DPUS=1 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl16_bl10_dpus1_M4096_V65544
+Running = NR_DPUS=2 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl1_bl10_dpus2_M4096_V524352
+Running = NR_DPUS=2 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl1_bl10_dpus2_M4096_V262176
+Running = NR_DPUS=2 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl1_bl10_dpus2_M4096_V131088
+Running = NR_DPUS=2 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl1_bl10_dpus2_M4096_V65544
+Running = NR_DPUS=2 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl2_bl10_dpus2_M4096_V524352
+Running = NR_DPUS=2 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl2_bl10_dpus2_M4096_V262176
+Running = NR_DPUS=2 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl2_bl10_dpus2_M4096_V131088
+Running = NR_DPUS=2 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl2_bl10_dpus2_M4096_V65544
+Running = NR_DPUS=2 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl4_bl10_dpus2_M4096_V524352
+Running = NR_DPUS=2 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl4_bl10_dpus2_M4096_V262176
+Running = NR_DPUS=2 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl4_bl10_dpus2_M4096_V131088
+Running = NR_DPUS=2 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl4_bl10_dpus2_M4096_V65544
+Running = NR_DPUS=2 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl8_bl10_dpus2_M4096_V524352
+Running = NR_DPUS=2 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl8_bl10_dpus2_M4096_V262176
+Running = NR_DPUS=2 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl8_bl10_dpus2_M4096_V131088
+Running = NR_DPUS=2 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl8_bl10_dpus2_M4096_V65544
+Running = NR_DPUS=2 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl16_bl10_dpus2_M4096_V524352
+Running = NR_DPUS=2 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl16_bl10_dpus2_M4096_V262176
+Running = NR_DPUS=2 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl16_bl10_dpus2_M4096_V131088
+Running = NR_DPUS=2 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl16_bl10_dpus2_M4096_V65544
+Running = NR_DPUS=4 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl1_bl10_dpus4_M4096_V524352
+Running = NR_DPUS=4 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl1_bl10_dpus4_M4096_V262176
+Running = NR_DPUS=4 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl1_bl10_dpus4_M4096_V131088
+Running = NR_DPUS=4 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl1_bl10_dpus4_M4096_V65544
+Running = NR_DPUS=4 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl2_bl10_dpus4_M4096_V524352
+Running = NR_DPUS=4 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl2_bl10_dpus4_M4096_V262176
+Running = NR_DPUS=4 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl2_bl10_dpus4_M4096_V131088
+Running = NR_DPUS=4 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl2_bl10_dpus4_M4096_V65544
+Running = NR_DPUS=4 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl4_bl10_dpus4_M4096_V524352
+Running = NR_DPUS=4 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl4_bl10_dpus4_M4096_V262176
+Running = NR_DPUS=4 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl4_bl10_dpus4_M4096_V131088
+Running = NR_DPUS=4 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl4_bl10_dpus4_M4096_V65544
+Running = NR_DPUS=4 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl8_bl10_dpus4_M4096_V524352
+Running = NR_DPUS=4 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl8_bl10_dpus4_M4096_V262176
+Running = NR_DPUS=4 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl8_bl10_dpus4_M4096_V131088
+Running = NR_DPUS=4 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl8_bl10_dpus4_M4096_V65544
+Running = NR_DPUS=4 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl16_bl10_dpus4_M4096_V524352
+Running = NR_DPUS=4 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl16_bl10_dpus4_M4096_V262176
+Running = NR_DPUS=4 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl16_bl10_dpus4_M4096_V131088
+Running = NR_DPUS=4 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl16_bl10_dpus4_M4096_V65544
+Running = NR_DPUS=8 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl1_bl10_dpus8_M4096_V524352
+Running = NR_DPUS=8 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl1_bl10_dpus8_M4096_V262176
+Running = NR_DPUS=8 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl1_bl10_dpus8_M4096_V131088
+Running = NR_DPUS=8 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl1_bl10_dpus8_M4096_V65544
+Running = NR_DPUS=8 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl2_bl10_dpus8_M4096_V524352
+Running = NR_DPUS=8 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl2_bl10_dpus8_M4096_V262176
+Running = NR_DPUS=8 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl2_bl10_dpus8_M4096_V131088
+Running = NR_DPUS=8 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl2_bl10_dpus8_M4096_V65544
+Running = NR_DPUS=8 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl4_bl10_dpus8_M4096_V524352
+Running = NR_DPUS=8 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl4_bl10_dpus8_M4096_V262176
+Running = NR_DPUS=8 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl4_bl10_dpus8_M4096_V131088
+Running = NR_DPUS=8 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl4_bl10_dpus8_M4096_V65544
+Running = NR_DPUS=8 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl8_bl10_dpus8_M4096_V524352
+Running = NR_DPUS=8 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl8_bl10_dpus8_M4096_V262176
+Running = NR_DPUS=8 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl8_bl10_dpus8_M4096_V131088
+Running = NR_DPUS=8 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl8_bl10_dpus8_M4096_V65544
+Running = NR_DPUS=8 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl16_bl10_dpus8_M4096_V524352
+Running = NR_DPUS=8 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl16_bl10_dpus8_M4096_V262176
+Running = NR_DPUS=8 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl16_bl10_dpus8_M4096_V131088
+Running = NR_DPUS=8 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl16_bl10_dpus8_M4096_V65544
+Running = NR_DPUS=16 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl1_bl10_dpus16_M4096_V524352
+Running = NR_DPUS=16 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl1_bl10_dpus16_M4096_V262176
+Running = NR_DPUS=16 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl1_bl10_dpus16_M4096_V131088
+Running = NR_DPUS=16 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl1_bl10_dpus16_M4096_V65544
+Running = NR_DPUS=16 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl2_bl10_dpus16_M4096_V524352
+Running = NR_DPUS=16 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl2_bl10_dpus16_M4096_V262176
+Running = NR_DPUS=16 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl2_bl10_dpus16_M4096_V131088
+Running = NR_DPUS=16 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl2_bl10_dpus16_M4096_V65544
+Running = NR_DPUS=16 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl4_bl10_dpus16_M4096_V524352
+Running = NR_DPUS=16 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl4_bl10_dpus16_M4096_V262176
+Running = NR_DPUS=16 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl4_bl10_dpus16_M4096_V131088
+Running = NR_DPUS=16 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl4_bl10_dpus16_M4096_V65544
+Running = NR_DPUS=16 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl8_bl10_dpus16_M4096_V524352
+Running = NR_DPUS=16 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl8_bl10_dpus16_M4096_V262176
+Running = NR_DPUS=16 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl8_bl10_dpus16_M4096_V131088
+Running = NR_DPUS=16 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl8_bl10_dpus16_M4096_V65544
+Running = NR_DPUS=16 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl16_bl10_dpus16_M4096_V524352
+Running = NR_DPUS=16 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl16_bl10_dpus16_M4096_V262176
+Running = NR_DPUS=16 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl16_bl10_dpus16_M4096_V131088
+Running = NR_DPUS=16 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl16_bl10_dpus16_M4096_V65544
+Running = NR_DPUS=32 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl1_bl10_dpus32_M4096_V524352
+Running = NR_DPUS=32 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl1_bl10_dpus32_M4096_V262176
+Running = NR_DPUS=32 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl1_bl10_dpus32_M4096_V131088
+Running = NR_DPUS=32 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl1_bl10_dpus32_M4096_V65544
+Running = NR_DPUS=32 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl2_bl10_dpus32_M4096_V524352
+Running = NR_DPUS=32 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl2_bl10_dpus32_M4096_V262176
+Running = NR_DPUS=32 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl2_bl10_dpus32_M4096_V131088
+Running = NR_DPUS=32 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl2_bl10_dpus32_M4096_V65544
+Running = NR_DPUS=32 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl4_bl10_dpus32_M4096_V524352
+Running = NR_DPUS=32 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl4_bl10_dpus32_M4096_V262176
+Running = NR_DPUS=32 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl4_bl10_dpus32_M4096_V131088
+Running = NR_DPUS=32 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl4_bl10_dpus32_M4096_V65544
+Running = NR_DPUS=32 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl8_bl10_dpus32_M4096_V524352
+Running = NR_DPUS=32 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl8_bl10_dpus32_M4096_V262176
+Running = NR_DPUS=32 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl8_bl10_dpus32_M4096_V131088
+Running = NR_DPUS=32 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl8_bl10_dpus32_M4096_V65544
+Running = NR_DPUS=32 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl16_bl10_dpus32_M4096_V524352
+Running = NR_DPUS=32 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl16_bl10_dpus32_M4096_V262176
+Running = NR_DPUS=32 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl16_bl10_dpus32_M4096_V131088
+Running = NR_DPUS=32 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl16_bl10_dpus32_M4096_V65544
+Running = NR_DPUS=64 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl1_bl10_dpus64_M4096_V524352
+Running = NR_DPUS=64 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl1_bl10_dpus64_M4096_V262176
+Running = NR_DPUS=64 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl1_bl10_dpus64_M4096_V131088
+Running = NR_DPUS=64 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl1_bl10_dpus64_M4096_V65544
+Running = NR_DPUS=64 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl2_bl10_dpus64_M4096_V524352
+Running = NR_DPUS=64 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl2_bl10_dpus64_M4096_V262176
+Running = NR_DPUS=64 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl2_bl10_dpus64_M4096_V131088
+Running = NR_DPUS=64 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl2_bl10_dpus64_M4096_V65544
+Running = NR_DPUS=64 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl4_bl10_dpus64_M4096_V524352
+Running = NR_DPUS=64 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl4_bl10_dpus64_M4096_V262176
+Running = NR_DPUS=64 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl4_bl10_dpus64_M4096_V131088
+Running = NR_DPUS=64 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl4_bl10_dpus64_M4096_V65544
+Running = NR_DPUS=64 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl8_bl10_dpus64_M4096_V524352
+Running = NR_DPUS=64 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl8_bl10_dpus64_M4096_V262176
+Running = NR_DPUS=64 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl8_bl10_dpus64_M4096_V131088
+Running = NR_DPUS=64 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl8_bl10_dpus64_M4096_V65544
+Running = NR_DPUS=64 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl16_bl10_dpus64_M4096_V524352
+Running = NR_DPUS=64 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl16_bl10_dpus64_M4096_V262176
+Running = NR_DPUS=64 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl16_bl10_dpus64_M4096_V131088
+Running = NR_DPUS=64 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl16_bl10_dpus64_M4096_V65544
+Running = NR_DPUS=128 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl1_bl10_dpus128_M4096_V524352
+Running = NR_DPUS=128 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl1_bl10_dpus128_M4096_V262176
+Running = NR_DPUS=128 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl1_bl10_dpus128_M4096_V131088
+Running = NR_DPUS=128 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl1_bl10_dpus128_M4096_V65544
+Running = NR_DPUS=128 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl2_bl10_dpus128_M4096_V524352
+Running = NR_DPUS=128 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl2_bl10_dpus128_M4096_V262176
+Running = NR_DPUS=128 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl2_bl10_dpus128_M4096_V131088
+Running = NR_DPUS=128 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl2_bl10_dpus128_M4096_V65544
+Running = NR_DPUS=128 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl4_bl10_dpus128_M4096_V524352
+Running = NR_DPUS=128 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl4_bl10_dpus128_M4096_V262176
+Running = NR_DPUS=128 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl4_bl10_dpus128_M4096_V131088
+Running = NR_DPUS=128 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl4_bl10_dpus128_M4096_V65544
+Running = NR_DPUS=128 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl8_bl10_dpus128_M4096_V524352
+Running = NR_DPUS=128 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl8_bl10_dpus128_M4096_V262176
+Running = NR_DPUS=128 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl8_bl10_dpus128_M4096_V131088
+Running = NR_DPUS=128 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl8_bl10_dpus128_M4096_V65544
+Running = NR_DPUS=128 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl16_bl10_dpus128_M4096_V524352
+Running = NR_DPUS=128 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl16_bl10_dpus128_M4096_V262176
+Running = NR_DPUS=128 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl16_bl10_dpus128_M4096_V131088
+Running = NR_DPUS=128 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl16_bl10_dpus128_M4096_V65544
+Running = NR_DPUS=256 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl1_bl10_dpus256_M4096_V524352
+Running = NR_DPUS=256 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl1_bl10_dpus256_M4096_V262176
+Running = NR_DPUS=256 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl1_bl10_dpus256_M4096_V131088
+Running = NR_DPUS=256 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl1_bl10_dpus256_M4096_V65544
+Running = NR_DPUS=256 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl2_bl10_dpus256_M4096_V524352
+Running = NR_DPUS=256 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl2_bl10_dpus256_M4096_V262176
+Running = NR_DPUS=256 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl2_bl10_dpus256_M4096_V131088
+Running = NR_DPUS=256 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl2_bl10_dpus256_M4096_V65544
+Running = NR_DPUS=256 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl4_bl10_dpus256_M4096_V524352
+Running = NR_DPUS=256 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl4_bl10_dpus256_M4096_V262176
+Running = NR_DPUS=256 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl4_bl10_dpus256_M4096_V131088
+Running = NR_DPUS=256 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl4_bl10_dpus256_M4096_V65544
+Running = NR_DPUS=256 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl8_bl10_dpus256_M4096_V524352
+Running = NR_DPUS=256 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl8_bl10_dpus256_M4096_V262176
+Running = NR_DPUS=256 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl8_bl10_dpus256_M4096_V131088
+Running = NR_DPUS=256 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl8_bl10_dpus256_M4096_V65544
+Running = NR_DPUS=256 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl16_bl10_dpus256_M4096_V524352
+Running = NR_DPUS=256 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl16_bl10_dpus256_M4096_V262176
+Running = NR_DPUS=256 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl16_bl10_dpus256_M4096_V131088
+Running = NR_DPUS=256 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl16_bl10_dpus256_M4096_V65544
+Running = NR_DPUS=512 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl1_bl10_dpus512_M4096_V524352
+Running = NR_DPUS=512 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl1_bl10_dpus512_M4096_V262176
+Running = NR_DPUS=512 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl1_bl10_dpus512_M4096_V131088
+Running = NR_DPUS=512 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl1_bl10_dpus512_M4096_V65544
+Running = NR_DPUS=512 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl2_bl10_dpus512_M4096_V524352
+Running = NR_DPUS=512 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl2_bl10_dpus512_M4096_V262176
+Running = NR_DPUS=512 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl2_bl10_dpus512_M4096_V131088
+Running = NR_DPUS=512 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl2_bl10_dpus512_M4096_V65544
+Running = NR_DPUS=512 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl4_bl10_dpus512_M4096_V524352
+Running = NR_DPUS=512 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl4_bl10_dpus512_M4096_V262176
+Running = NR_DPUS=512 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl4_bl10_dpus512_M4096_V131088
+Running = NR_DPUS=512 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl4_bl10_dpus512_M4096_V65544
+Running = NR_DPUS=512 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl8_bl10_dpus512_M4096_V524352
+Running = NR_DPUS=512 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl8_bl10_dpus512_M4096_V262176
+Running = NR_DPUS=512 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl8_bl10_dpus512_M4096_V131088
+Running = NR_DPUS=512 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl8_bl10_dpus512_M4096_V65544
+Running = NR_DPUS=512 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl16_bl10_dpus512_M4096_V524352
+Running = NR_DPUS=512 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl16_bl10_dpus512_M4096_V262176
+Running = NR_DPUS=512 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl16_bl10_dpus512_M4096_V131088
+Running = NR_DPUS=512 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl16_bl10_dpus512_M4096_V65544
+Running = NR_DPUS=1024 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl1_bl10_dpus1024_M4096_V524352
+Running = NR_DPUS=1024 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl1_bl10_dpus1024_M4096_V262176
+Running = NR_DPUS=1024 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl1_bl10_dpus1024_M4096_V131088
+Running = NR_DPUS=1024 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl1_bl10_dpus1024_M4096_V65544
+Running = NR_DPUS=1024 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl2_bl10_dpus1024_M4096_V524352
+Running = NR_DPUS=1024 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl2_bl10_dpus1024_M4096_V262176
+Running = NR_DPUS=1024 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl2_bl10_dpus1024_M4096_V131088
+Running = NR_DPUS=1024 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl2_bl10_dpus1024_M4096_V65544
+Running = NR_DPUS=1024 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl4_bl10_dpus1024_M4096_V524352
+Running = NR_DPUS=1024 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl4_bl10_dpus1024_M4096_V262176
+Running = NR_DPUS=1024 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl4_bl10_dpus1024_M4096_V131088
+Running = NR_DPUS=1024 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl4_bl10_dpus1024_M4096_V65544
+Running = NR_DPUS=1024 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl8_bl10_dpus1024_M4096_V524352
+Running = NR_DPUS=1024 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl8_bl10_dpus1024_M4096_V262176
+Running = NR_DPUS=1024 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl8_bl10_dpus1024_M4096_V131088
+Running = NR_DPUS=1024 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl8_bl10_dpus1024_M4096_V65544
+Running = NR_DPUS=1024 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl16_bl10_dpus1024_M4096_V524352
+Running = NR_DPUS=1024 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl16_bl10_dpus1024_M4096_V262176
+Running = NR_DPUS=1024 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl16_bl10_dpus1024_M4096_V131088
+Running = NR_DPUS=1024 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl16_bl10_dpus1024_M4096_V65544
+Running = NR_DPUS=2048 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl1_bl10_dpus2048_M4096_V524352
+Running = NR_DPUS=2048 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl1_bl10_dpus2048_M4096_V262176
+Running = NR_DPUS=2048 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl1_bl10_dpus2048_M4096_V131088
+Running = NR_DPUS=2048 NR_TASKLETS=1 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl1_bl10_dpus2048_M4096_V65544
+Running = NR_DPUS=2048 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl2_bl10_dpus2048_M4096_V524352
+Running = NR_DPUS=2048 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl2_bl10_dpus2048_M4096_V262176
+Running = NR_DPUS=2048 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl2_bl10_dpus2048_M4096_V131088
+Running = NR_DPUS=2048 NR_TASKLETS=2 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl2_bl10_dpus2048_M4096_V65544
+Running = NR_DPUS=2048 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl4_bl10_dpus2048_M4096_V524352
+Running = NR_DPUS=2048 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl4_bl10_dpus2048_M4096_V262176
+Running = NR_DPUS=2048 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl4_bl10_dpus2048_M4096_V131088
+Running = NR_DPUS=2048 NR_TASKLETS=4 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl4_bl10_dpus2048_M4096_V65544
+Running = NR_DPUS=2048 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl8_bl10_dpus2048_M4096_V524352
+Running = NR_DPUS=2048 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl8_bl10_dpus2048_M4096_V262176
+Running = NR_DPUS=2048 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl8_bl10_dpus2048_M4096_V131088
+Running = NR_DPUS=2048 NR_TASKLETS=8 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl8_bl10_dpus2048_M4096_V65544
+Running = NR_DPUS=2048 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 524352 >> profile/out_tl16_bl10_dpus2048_M4096_V524352
+Running = NR_DPUS=2048 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 262176 >> profile/out_tl16_bl10_dpus2048_M4096_V262176
+Running = NR_DPUS=2048 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 131088 >> profile/out_tl16_bl10_dpus2048_M4096_V131088
+Running = NR_DPUS=2048 NR_TASKLETS=16 BL=10 make all
+Running = GEMV -> ./bin/gemv_host -m 4096 -n 65544 >> profile/out_tl16_bl10_dpus2048_M4096_V65544
