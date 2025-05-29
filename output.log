@@ -797,3 +797,43 @@ dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=8 -DBL=10 -o
 [0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
          Please consider upgrading to a more recent OS.
          (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_1024_NR_TASKLETS_16_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=16 -DNR_DPUS=1024 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=16 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_2048_NR_TASKLETS_1_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=1 -DNR_DPUS=2048 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=1 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_2048_NR_TASKLETS_2_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=2 -DNR_DPUS=2048 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=2 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+make: Nothing to be done for 'all'.
+rm -f 	bin/.NR_DPUS_*_NR_TASKLETS_*_BL_.conf
+touch 	bin/.NR_DPUS_2048_NR_TASKLETS_4_BL_10.conf
+cc -o bin/gemv_host host/app.c -Wall -Wextra -g -Isupport -std=c11 -O3 `dpu-pkg-config --cflags --libs dpu` -DNR_TASKLETS=4 -DNR_DPUS=2048 -DBL=10
+dpu-upmem-dpurte-clang -Wall -Wextra -g -Isupport -O2 -DNR_TASKLETS=4 -DBL=10 -o bin/gemv_dpu dpu/task.c
+[0;33mWARNING:[0m This is the last release of the DPU toolchain for debian10.
+         Please consider upgrading to a more recent OS.
+         (Suppress this message by setting the environment variable UPMEM_NO_OS_WARNING to 1.)
